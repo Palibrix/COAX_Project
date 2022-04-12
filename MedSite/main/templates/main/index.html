@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+    <title>Main page</title>
+</head>
+<body>
+    <div id="Container">
+        <div id="Logo">
+            <img id="logo-icon" src="{%static 'main/images/logo.png'%}" alt="logo-icon">
+            <h1 id="logo-title">MedDie</h1>
+        </div>
+<!-- _______________________________________________ -->
+
+        <div id="Topnav">
+            <form id="navigation-container" action="index.html">
+                <ul id="navigation-container">
+                    <button class="navigation-tab">Profile</button>
+                    <button id="search-button" type="submit">
+                        <img id="search-icon" src="{%static 'main/images/search.png'%}" alt="">
+                    </button>
+                    <input id="navigation-search" name="search" type="text" placeholder=" Search...">
+                </ul>
+            </form>
+        </div>
+<!-- _______________________________________________ -->
+
+        <div id="Sidenav">
+            <h1 class="side-title">Dashboard</h1>
+            <ul class="side-list">
+                <li>Home</li>
+                <li>News</li>
+                <li>Messages</li>
+                <li>Contacts</li>
+                <li>My appoinments</li>
+            </ul>
+
+            <h1 class="side-title">Other shit</h1>
+            <ul class="side-list">
+                <li>Lab results</li>
+                <li>News</li>
+                <li>Messages</li>
+                <li>Contacts</li>
+                <li>My appoinments</li>
+            </ul>
+            
+            <h1 style="position: absolute; bottom: 50px;" class="side-title">Settings</h1>
+            <h1 style="position: absolute; bottom: 20px;" class="side-title">Log out</h1>
+        
+        </div>
+<!-- _______________________________________________ -->
+
+        <div id="Main">
+            <div class="Box">
+                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
+                <div class="picture-text">
+                    <h3>Very long title sho kapec</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="Box">
+                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
+                <div class="picture-text">
+                    <h3>Very long title sho kapec</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="Box">
+                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
+                <div class="picture-text">
+                    <h3>Very long title sho kapec</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="Box">
+                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
+                <div class="picture-text">
+                    <h3>Very long title sho kapec</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="Box">
+                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
+                <div class="picture-text">
+                    <h3>Very long title sho kapec</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+            <div class="Box">
+                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
+                <div class="picture-text">
+                    <h3>Very long title sho kapec</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+
+        
+            
+
+            <div id="Pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+<!-- _______________________________________________ -->
+
+    </div>
+</body>
+</html>
