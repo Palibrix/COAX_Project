@@ -14,6 +14,7 @@ import environs
 from pathlib import Path
 import os
 
+from django.urls import reverse_lazy
 
 env = environs.Env()
 environs.Env.read_env()
@@ -41,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'phonenumber_field',
     'main',
+    'authentication',
 ]
+
+AUTH_USER_MODEL = "authentication.User"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +55,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'core.middlewares.LoginRequiredMiddleware',
+
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -73,6 +80,7 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 WSGI_APPLICATION = 'core.wsgi.application'
+
 
 
 # Database
@@ -130,3 +138,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "/"
+# LOGOUT_REDIRECT_URL = "/auth/login"
+# LOGOUT_URL = reverse_lazy('login')
+LOGIN_URL = reverse_lazy('login')
