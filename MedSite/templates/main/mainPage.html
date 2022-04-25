@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{#{% extends 'base.html' %}#}
 {% load static %}
 <html lang="en">
 <head>
@@ -28,12 +29,12 @@
 <!-- _______________________________________________ -->
 
         <div id="Topnav">
-            <form id="navigation-container" action="index.html">
+            <form id="navigation-container" action="mainPage.html">
                 <div class="dropdown">
                     <button class="dropbtn">Profile</button>
                       <div class="dropdown-content">
                         <a href="#">Settings</a>
-                        <a href="#">Log Out</a>
+                        <a href="{% url 'logout' %}">Log Out</a>
                       </div>
                 </div>
                     <button id="search-button" type="submit">
