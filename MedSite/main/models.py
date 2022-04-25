@@ -3,8 +3,8 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.db import models
 
 
-class User(models.Model):
-    pass
+# class User(models.Model):
+#     pass
     # name = models.CharField(max_length=255, null=False, blank=False, help_text="Enter your name")
     # surname = models.CharField(max_length=255, null=False, blank=False, help_text="Enter your surname")
     # dateOfBirth = models.DateField(help_text="Pick your birth date")
