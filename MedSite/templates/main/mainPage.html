@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{#{% extends 'base.html' %}#}
 {% load static %}
 <html lang="en">
 <head>
@@ -22,22 +23,22 @@
                 }
             </script>
 
-            <img id="logo-icon" src="{%static 'main/images/logo.png'%}" alt="logo-icon">
+            <img id="logo-icon" src="{%static 'main/images/logo.png' %}" alt="logo-icon">
             <h1 id="logo-title">MedDie</h1>
         </div>
 <!-- _______________________________________________ -->
 
         <div id="Topnav">
-            <form id="navigation-container" action="index.html">
+            <form id="navigation-container" action="mainPage.html">
                 <div class="dropdown">
                     <button class="dropbtn">Profile</button>
                       <div class="dropdown-content">
                         <a href="#">Settings</a>
-                        <a href="#">Log Out</a>
+                        <a href="{% url 'logout' %}">Log Out</a>
                       </div>
                 </div>
                     <button id="search-button" type="submit">
-                        <img id="search-icon" src="{%static 'main/images/search.png'%}" alt="">
+                        <img id="search-icon" src="{%static 'main/images/search.png' %}" alt="">
                     </button>
                     <input id="navigation-search" name="search" type="text" placeholder=" Search...">
             </form>
