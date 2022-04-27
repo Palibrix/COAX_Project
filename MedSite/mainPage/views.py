@@ -3,11 +3,11 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
-# from main.models import User
-# from main.forms import MainForm
+# from mainPage.models import User
+# from mainPage.forms import MainForm
 
 class MainPage(LoginView):
-    template_name = 'main/mainPage.html'
+    template_name = 'mainPage/mainPage.html'
 
     # def get_success_url(self):
     #     return reverse_lazy('login')
