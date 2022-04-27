@@ -9,7 +9,7 @@ from django.conf import settings
 
 
 class CustomLoginView(LoginView):
-    template_name = 'login/login.html'
+    template_name = 'authentication/authentication.html'
 
     def get_success_url(self):
         return reverse_lazy('mainPage')

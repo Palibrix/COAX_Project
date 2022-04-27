@@ -10,5 +10,5 @@ class MainPage(LoginView):
     template_name = 'mainPage/mainPage.html'
 
     # def get_success_url(self):
-    #     return reverse_lazy('login')
+    #     return reverse_lazy('authentication')
 
