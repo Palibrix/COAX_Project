@@ -3,6 +3,10 @@ from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 import uuid
 
+# from phonenumber_field.modelfields import PhoneNumberField
+
+
+
 class CustomUserManager(BaseUserManager):
 
     def create_user(self, password, email):
@@ -58,7 +62,9 @@ class User(AbstractBaseUser, PermissionsMixin):
                                        verbose_name='is superuser')
 
     date_joined = models.DateTimeField(auto_now_add=True, verbose_name='date joined')
-    last_login = models.DateTimeField('last authentication', blank=True, null=True)
+
+    last_login = models.DateTimeField('last login', blank=True, null=True)
+
 
     objects = CustomUserManager()
 

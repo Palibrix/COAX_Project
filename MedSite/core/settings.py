@@ -22,7 +22,6 @@ environs.Env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 environs.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -82,7 +81,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -140,6 +138,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/"
-# LOGOUT_REDIRECT_URL = "/auth/authentication"
-# LOGOUT_URL = reverse_lazy('authentication')
-LOGIN_URL = reverse_lazy('authentication')
+# LOGOUT_REDIRECT_URL = "/auth/login"
+# LOGOUT_URL = reverse_lazy('login')
+LOGIN_URL = reverse_lazy('login')
