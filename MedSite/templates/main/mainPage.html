@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
-    <title>Main page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mainPage/style.css' %}">
 </head>
 <body>
+  <main>
     <div id="Container">
         <div id="Logo">
             <span style="margin-left:20px;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -23,7 +23,11 @@
                 }
             </script>
 
+<<<<<<< HEAD:MedSite/templates/base.html
+            <img id="logo-icon" src="{%static 'mainPage/images/logo.png' %}" alt="logo-icon">
+=======
             <img id="logo-icon" src="{%static 'main/images/logo.png' %}" alt="logo-icon">
+>>>>>>> main:MedSite/templates/main/mainPage.html
             <h1 id="logo-title">MedDie</h1>
         </div>
 <!-- _______________________________________________ -->
@@ -38,7 +42,11 @@
                       </div>
                 </div>
                     <button id="search-button" type="submit">
+<<<<<<< HEAD:MedSite/templates/base.html
+                        <img id="search-icon" src="{%static 'mainPage/images/search.png' %}" alt="">
+=======
                         <img id="search-icon" src="{%static 'main/images/search.png' %}" alt="">
+>>>>>>> main:MedSite/templates/main/mainPage.html
                     </button>
                     <input id="navigation-search" name="search" type="text" placeholder=" Search...">
             </form>
@@ -63,68 +71,17 @@
                 <li><a href="#">Contacts</a></li>
                 <li><a href="#">Appointments</a></li>
             </ul>
-            
+
             <h1 style="position: absolute; bottom: 100px;" class="side-title">Settings</h1>
             <h1 style="position: absolute; bottom: 70px;" class="side-title">Exit</h1>
-        
+
         </div>
-<!-- _______________________________________________ -->
 
-        <div id="Main">
-            <div class="Box">
-                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
-                <div class="picture-text">
-                    <h3>Very long title sho kapec</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="Box">
-                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
-                <div class="picture-text">
-                    <h3>Very long title sho kapec</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="Box">
-                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
-                <div class="picture-text">
-                    <h3>Very long title sho kapec</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="Box">
-                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
-                <div class="picture-text">
-                    <h3>Very long title sho kapec</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="Box">
-                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
-                <div class="picture-text">
-                    <h3>Very long title sho kapec</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="Box">
-                <img class="picture" src="{% static 'main/images/pic.jpg' %}" alt="pic1">
-                <div class="picture-text">
-                    <h3>Very long title sho kapec</h3>
-                    <p>Description</p>
-                </div>
-            </div>
+        {% block mainPage %}
 
-
-        
-            
-
-            <div id="Pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">&raquo;</a>
-            </div>
-        </div>
-<!-- _______________________________________________ -->
-
+        {% endblock %}
     </div>
+
+  </main>
 </body>
 </html>

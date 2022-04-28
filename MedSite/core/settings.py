@@ -22,7 +22,6 @@ environs.Env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 environs.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -41,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonenumber_field',
-    'main',
+    'mainPage',
     'authentication',
 ]
 
@@ -80,7 +79,6 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 WSGI_APPLICATION = 'core.wsgi.application'
-
 
 
 # Database
