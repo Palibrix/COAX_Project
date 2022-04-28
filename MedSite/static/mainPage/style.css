@@ -188,7 +188,7 @@ body{
 
 
 .Box{
-    width: 25%;
+    width: 300px;
     height: 30%;
     display: flex;
     justify-content: flex-end;
