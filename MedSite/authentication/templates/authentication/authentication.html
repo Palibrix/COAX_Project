@@ -1,8 +1,7 @@
 {% extends 'base_authentication.html' %}
 
 {% block authentication %}
-    <div class="d-flex justify-content-center">
-
+    <div class="InputContainer">
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
