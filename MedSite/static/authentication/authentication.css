@@ -1,7 +1,8 @@
 body{
-    padding: 50px;
     display: flex;
     justify-content: center;
+    margin:0;
+    padding: 0;
 }
 
 .InputContainer{
@@ -9,12 +10,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 50%;
-    height: 500px;
-    font-size: large;
+    width: 100%;
+    height: 600px;
     flex-direction: column;
-    border-radius: 30px;
-    box-shadow: 0px 0px 15px 0px;
     font-size: xx-large;
 }
 
@@ -40,27 +38,43 @@ input[type="text" i] {
     border-radius: 10px;
 }
 
-.InputContainer button{
-    width: 20%;
-    height: 10%;
+.InputContainer ul{
+    width: 70%;
+    height: auto;
+    font-size: small;
+}
+
+.InputBox{
+    padding: 50px;
+    width: 40%;
+    height: 400px;
+    /*background-color: red;*/
+}
+
+.ButtonsCont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /*background-color: violet;*/
+}
+
+.ButtonsCont button{
+    width: 150px;
+    height: 30px;
     background-color: white;
     color: black;
     border-radius: 10px;
     transition: 0.1s;
     font-size: medium;
+    border: none;
 }
 
-.InputContainer button:hover{
-    width: 20.5%;
-    height: 10.5%;
+.ButtonsCont button:hover{
+    width: 150px;
+    height: 30px;
     background-color: white;
     color: black;
     border-radius: 10px;
+    font-size: medium;
     cursor: pointer;
-}
-
-.InputContainer ul{
-    width: 70%;
-    height: auto;
-    font-size: small;
 }
