@@ -1,11 +1,14 @@
 {% extends 'base_authentication.html' %}
 
 {% block authentication %}
+{#    {% load crispy_forms_tags %}#}
+
     <div class="d-flex justify-content-center">
 
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+             {{ form.as_p }}
+{#            {{ login_form|crispy }}#}
             <button type="submit" class="btn btn-login btn-primary">Login</button>
         </form>
     </div>
