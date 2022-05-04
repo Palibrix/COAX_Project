@@ -15,4 +15,4 @@ class MainPage(LoginView):
     #     return reverse_lazy('login')
 
 def SettingsPage(request):
-    return render (request, 'settingsPage/settingsPage.html',locals())
+    return render (request, 'settingsPage/settingsPage.html', locals())

@@ -4,12 +4,13 @@
 }
 
 .PersonalInfoCont{
+    background-color: white;
     margin-left:30%;
     margin-right:30%;
     display: flex;
     justify-content:space-around;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     font-size: medium;
 }
 
@@ -17,4 +18,5 @@
 .PersonalInfoCont p{
     font-size: large;
     text-decoration: underline 2px;
+    margin: 0;
 }
