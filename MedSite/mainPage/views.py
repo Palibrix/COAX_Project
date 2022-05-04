@@ -12,7 +12,7 @@ class MainPage(LoginView):
     template_name = 'mainPage/mainPage.html'
 
     # def get_success_url(self):
-    #     return reverse_lazy('authentication')
+    #     return reverse_lazy('login')
 
 def SettingsPage(request):
     return render (request, 'settingsPage/settingsPage.html')

@@ -5,7 +5,7 @@ from django.conf import settings
 from re import compile
 
 
-EXEMPT_URLS = [compile(settings.LOGIN_URL.lstrip('/')), compile('admin')]
+EXEMPT_URLS = [compile(settings.LOGIN_URL.lstrip('/')), compile('admin'), compile("auth/register/")]
 
 
 def is_exempt_url(request, exempt_urls=None):

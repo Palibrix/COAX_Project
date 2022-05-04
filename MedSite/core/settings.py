@@ -22,7 +22,6 @@ environs.Env.read_env()
 BASE_DIR = Path(__file__).resolve().parent.parent
 environs.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -43,8 +42,10 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'mainPage',
     'authentication',
+    'crispy_forms',
 ]
 
+crispy_template_pack = 'bootstrap 4'
 AUTH_USER_MODEL = "authentication.User"
 
 MIDDLEWARE = [
@@ -82,7 +83,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -116,30 +116,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/4.0/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
-
 STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/"
-# LOGOUT_REDIRECT_URL = "/auth/authentication"
-# LOGOUT_URL = reverse_lazy('authentication')
-LOGIN_URL = reverse_lazy('authentication')
+# LOGOUT_REDIRECT_URL = "/auth/login"
+# LOGOUT_URL = reverse_lazy('login')
+LOGIN_URL = reverse_lazy('login')
