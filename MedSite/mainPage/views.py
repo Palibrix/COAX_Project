@@ -16,3 +16,7 @@ class MainPage(LoginView):
 
 def SettingsPage(request):
     return render (request, 'settingsPage/settingsPage.html', locals())
+
+def Stuff(request):
+    user = User.objects.all()
+    return render (request, 'stuff/stuff.html', {'user': user})
