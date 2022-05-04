@@ -1,25 +1,12 @@
 {% extends 'base_authentication.html' %}
-{% load static %}
-{% block authentication %}
-    <div class="InputContainer">
-        <div class="InputBox">
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-            <div class="ButtonsCont">
-                <button type="submit" class="btn btn-login btn-primary">Login</button>
-                <button formaction="#">Not Registered?</button>
-            </div>
-            </form>
-        </div>
 
-<!--        <div class="InputBox">-->
-<!--            <form method="post">-->
-<!--                {% csrf_token %}-->
-<!--                {{ form.as_p }}-->
-<!--                <button type="submit" class="btn btn-login btn-primary">Register</button>-->
-<!--            </form>-->
-<!--        </div>-->
+{% block authentication %}
+    <div class="d-flex justify-content-center">
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-login btn-primary">Login</button>
+        </form>
     </div>
 {% endblock %}
-
