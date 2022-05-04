@@ -20,3 +20,7 @@
     text-decoration: underline 2px;
     margin: 0;
 }
+
+.PersonalInfoCont button{
+    margin-bottom: 5%;
+}
