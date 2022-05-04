@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-    {% block mainPage%}
+    {% block content%}
 <head>
         <link rel="stylesheet" type="text/css" href="{% static 'mainPage/style.css' %}">
 </head>
-        <div id="Main">
         <div class="Box">
             <img class="picture" src="{% static 'mainPage/images/pic.jpg' %}" alt="pic1">
             <div class="picture-text">
@@ -56,6 +55,5 @@
             <a href="#">&laquo;</a>
             <a href="#">&raquo;</a>
         </div>
-    </div>
 
     {% endblock %}

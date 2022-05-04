@@ -32,7 +32,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">Profile</button>
                       <div class="dropdown-content">
-                        <a href="#">Settings</a>
+                        <a href="{% url 'settings' %}">Settings</a>
                         <a href="{% url 'logout' %}">Log Out</a>
                       </div>
                 </div>
@@ -68,9 +68,12 @@
 
         </div>
 
-        {% block mainPage %}
+        <div id="Main">
+            {% block content %}
 
-        {% endblock %}
+            {% endblock %}
+        </div>
+
     </div>
 
   </main>

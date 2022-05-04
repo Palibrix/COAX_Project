@@ -1,5 +1,7 @@
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render
+from authentication.models import User
+
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
@@ -12,3 +14,5 @@ class MainPage(LoginView):
     # def get_success_url(self):
     #     return reverse_lazy('authentication')
 
+def SettingsPage(request):
+    return render (request, 'settingsPage/settingsPage.html')
