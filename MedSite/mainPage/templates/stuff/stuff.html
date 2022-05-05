@@ -4,31 +4,34 @@
 <head>
     <link rel="stylesheet" type="text/css" href="{% static 'stuff/stuff.css' %}">
 </head>
-    <div class="CONTAINER">
-        <div class="StuffCont">
-            <ul class="StuffList">
+<div class="CONTAINER">
+    <div class="StuffCont">
+        <div class="staffManagement">
+            <button>Sort By</button>
+            <button>Add Doctor</button>
+            <button>Remove Doctor</button>
+        </div>
+        <ul class="StuffList">
             <li class="UserCont">
                 <img src="{% static 'stuff/images/PFP.png' %}">
-                {% for us in user%}
+<!--                {% for us in user%}-->
                     <h3>{{us.name}}</h3>
-                    <h3>{{us.surname}}</h3>
-                {% endfor %}
+<!--                    <h3>{{us.surname}}</h3>-->
+<!--                {% endfor %}-->
+                <button class="msgButton">Message</button>
+                <button class="detailsButton">Details</button>
             </li>
 
             <li class="UserCont">
                 <img src="{% static 'stuff/images/PFP.png' %}">
-                {% for us in user%}
-                    <h3>{{us.name}}</h3>
-                    <h3>{{us.surname}}</h3>
-                {% endfor %}
+                <button class="msgButton">Message</button>
+                <button class="detailsButton">Details</button>
             </li>
 
             <li class="UserCont">
                 <img src="{% static 'stuff/images/PFP.png' %}">
-                {% for us in user%}
-                    <h3>{{us.name}}</h3>
-                    <h3>{{us.surname}}</h3>
-                {% endfor %}
+                <button class="msgButton">Message</button>
+                <button class="detailsButton">Details</button>
             </li>
 
             </ul>
