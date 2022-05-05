@@ -7,6 +7,10 @@
     font-family: Ubuntu;
 }
 
+.CONTAINER button{
+    cursor: pointer;
+}
+
 .StuffCont{
     width: 70%;
     height: fit-content;
