@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.MainPage.as_view(), name='mainPage'),
     path('settings', views.SettingsPage, name='settings'),
     path('stuff', views.Stuff, name='stuff'),
+    path('addDoctor', views.AddDoc, name='addDoctor'),
 ]

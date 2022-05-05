@@ -20,3 +20,6 @@ def SettingsPage(request):
 def Stuff(request):
     allData = User.objects.all()
     return render (request, 'stuff/stuff.html', locals())
+
+def AddDoc(request):
+    return render(request, 'stuff/addDoctor.html')
