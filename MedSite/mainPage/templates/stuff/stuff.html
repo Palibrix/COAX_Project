@@ -11,30 +11,19 @@
             <button>Add Doctor</button>
             <button>Remove Doctor</button>
         </div>
-        <ul class="StuffList">
-            <li class="UserCont">
-                <img src="{% static 'stuff/images/PFP.png' %}">
-<!--                {% for us in user%}-->
-                    <h3>{{us.name}}</h3>
-                    <h3>{{us.surname}}</h3>
-<!--                {% endfor %}-->
-                <button class="msgButton">Message</button>
-                <button class="detailsButton">Details</button>
-            </li>
 
-            <li class="UserCont">
-                <img src="{% static 'stuff/images/PFP.png' %}">
-                <button class="msgButton">Message</button>
-                <button class="detailsButton">Details</button>
-            </li>
-
-            <li class="UserCont">
-                <img src="{% static 'stuff/images/PFP.png' %}">
-                <button class="msgButton">Message</button>
-                <button class="detailsButton">Details</button>
-            </li>
-
-            </ul>
+        <div class="staffTableCont">
+            <table class="staffTable">
+            {% for person in allData%}
+            <tr>
+                <td><img src="{% static 'stuff/images/PFP.png' %}"></td>
+                <td>{{person.name}}</td>
+                <td>{{person.surname}}</td>
+                <td>{{person.email}}</td>
+            </tr>
+            {% endfor%}
+        </table>
+        {% endblock %}
         </div>
-    </div>
-{% endblock %}
+</div>
+</div>
