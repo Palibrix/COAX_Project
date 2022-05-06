@@ -19,7 +19,7 @@ def SettingsPage(request):
 
 def Stuff(request):
     allData = User.objects.all()
-    return render (request, 'stuff/stuff.html', locals())
+    return render (request, 'staff/staff.html', locals())
 
 def AddDoc(request):
-    return render(request, 'stuff/addDoctor.html')
+    return render(request, 'staff/addDoctor.html')
