@@ -6,4 +6,5 @@ urlpatterns = [
     path('settings', views.SettingsPage, name='settings'),
     path('staff', views.Stuff, name='staff'),
     path('addDoctor', views.AddDoc, name='addDoctor'),
+    path('editDoctor', views.EditDoc, name='editDoctor'),
 ]

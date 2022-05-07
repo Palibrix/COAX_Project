@@ -21,12 +21,12 @@
                     <td>{{person.name}}</td>
                     <td>{{person.surname}}</td>
                     <td>{{person.email}}</td>
-                    <td class="EditTD"><a href="#"><img class="Edit" src="{% static 'staff/images/Edit.png' %}"></a></td>
+                    <td class="EditTD"><a href="{% url 'editDoctor' %}"><img class="Edit" src="{% static 'staff/images/Edit.png' %}"></a></td>
                     <td class="SeeTD"><a href="SomehowLinkTheUserToSeeHisData"><img class="See" src="{% static 'staff/images/See.png' %}"></a></td>
                 </tr>
                 {% endfor %}
             </table>
-            {% endblock %}
         </div>
 </div>
 </div>
+{% endblock %}

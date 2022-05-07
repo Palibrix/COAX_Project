@@ -23,3 +23,6 @@ def Stuff(request):
 
 def AddDoc(request):
     return render(request, 'staff/addDoctor.html')
+
+def EditDoc(request):
+    return render(request, 'staff/editDoctor.html')
