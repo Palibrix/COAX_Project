@@ -14,7 +14,7 @@
             <span style="margin-left:20px;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             <script>
                 function openNav() {
-                  document.getElementById("Sidenav").style.width = "230px";
+                  document.getElementById("Sidenav").style.width = "20%";
                 }
 
                 function closeNav() {
@@ -22,8 +22,8 @@
                 }
             </script>
 
-            <img id="logo-icon" src="{%static 'mainPage/images/logo.png' %}" alt="logo-icon">
-            <h1 id="logo-title">MedDie</h1>
+<!--            <img id="logo-icon" src="{%static 'mainPage/images/logo.png' %}" alt="logo-icon">-->
+            <i><h1 id="logo-title">HellScare</h1></i>
         </div>
 <!-- _______________________________________________ -->
 
@@ -31,10 +31,10 @@
             <form id="navigation-container" action="mainPage.html">
                 <div class="dropdown">
                     <button class="dropbtn">Profile</button>
-                      <div class="dropdown-content">
-                        <a href="{% url 'settings' %}">Settings</a>
-                        <a href="{% url 'logout' %}">Log Out</a>
-                      </div>
+<!--                      <div class="dropdown-content">-->
+<!--                        <a href="{% url 'settings' %}">Settings</a>-->
+<!--                        <a href="{% url 'logout' %}">Log Out</a>-->
+<!--                      </div>-->
                 </div>
                     <button id="search-button" type="submit">
                         <img id="search-icon" src="{%static 'mainPage/images/search.png' %}" alt="">
@@ -47,23 +47,43 @@
         <div id="Sidenav" class="sidenav">
             <h1 class="side-title">Dashboard</h1>
             <ul class="side-list">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <li><a href="{% url 'mainPage'%}">Home</a></li>
-                <li><a href="{% url 'staff' %}">Stuff</a></li>
-                <li><a href="#">Equipment</a></li>
-                <li><a href="#">Appointments</a></li>
+                <a
+                    style="font-size: 50px;
+                    color: black"
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()">&times;
+                </a>
+                <li>
+                    <a href="{% url 'mainPage'%}">
+                        <img class="side-icon" src="{% static 'mainPage/images/home-icon.png'%}">Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'staff' %}">
+                        <img class="side-icon" src="{% static 'mainPage/images/people-icon.png'%}">Staff
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="side-icon" src="{% static 'mainPage/images/box-icon.png'%}">Equipment
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="side-icon" src="{% static 'mainPage/images/note-icon.png'%}">Appointments
+                    </a>
+                </li>
             </ul>
 
             <h1 class="side-title">Other</h1>
             <ul class="side-list">
-                <li><a href="#">Lab</a></li>
                 <li><a href="#">News</a></li>
-                <li><a href="#">Messages</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
 
-            <h1 style="position: absolute; bottom: 100px;" class="side-title">Settings</h1>
-            <h1 style="position: absolute; bottom: 70px;" class="side-title">Exit</h1>
+            <a href="#"><h1 style="position: absolute; bottom: 100px;" class="side-title">Settings</h1></a>
+            <a href="{% url 'logout' %}"><h1 style="position: absolute; bottom: 60px;" class="side-title">Logout</h1></a>
 
         </div>
 
