@@ -30,10 +30,11 @@
 
         <div class="PermissionContainer">
             {% for person in allData %}
-            <h1>{{person.is_staff}}
+            <h1>
+                {{person.is_staff}}
                 <label class="switch">
-                  <input type="checkbox">
-                  <span class="slider round"></span>
+                    <input type="checkbox">
+                    <span class="slider round"></span>
                 </label>
             </h1>
             {% endfor %}

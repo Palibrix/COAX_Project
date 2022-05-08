@@ -91,11 +91,11 @@ html, body {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd; }
+/*.dropdown-content a:hover {background-color: #ddd; }*/
 
-.dropdown:hover .dropdown-content {display: block;}
+/*.dropdown:hover .dropdown-content {display: block;}*/
 
-.dropdown:hover .dropbtn {background-color: black}
+/*.dropdown:hover .dropbtn {background-color: black}*/
 
 #navigation-search{
     border: none;
@@ -133,7 +133,7 @@ html, body {
     top: 0;
     left: 0;
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 30px;
 
     /*transition: 0.1s;*/
 }
@@ -143,8 +143,6 @@ a:visited,
 a:focus,
 a:active{
     text-decoration: none;
-    padding: 4px 4px 4px 16px;
-    font-size: large;
     display: block;
     transition: 0.3s;
     color: black;
