@@ -25,4 +25,5 @@ def AddDoc(request):
     return render(request, 'staff/addDoctor.html')
 
 def EditDoc(request):
-    return render(request, 'staff/editDoctor.html')
+    allData = User.objects.all()
+    return render(request, 'staff/editDoctor.html', locals())

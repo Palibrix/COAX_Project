@@ -6,6 +6,39 @@
     <title>Edit</title>
 </head>
     <div class="EditContainer">
+        <div class="PermissionContainer">
+            {% for person in allData %}
+            <h1>
+                <i>{{person.name}}</i>
+            </h1>
+            <h1>
+                Is staff: {{person.is_staff}}
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+            </h1>
+            <h1 style="border-bottom: 3px solid grey">
+                Is superuser?: {{person.is_superuser}}
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+            </h1>
+            {% endfor %}
+        </div>
+
+        <div class="PermissionContainer">
+            {% for person in allData %}
+            <h1>{{person.is_staff}}
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+            </h1>
+            {% endfor %}
+        </div>
+
 
     </div>
 {% endblock %}
