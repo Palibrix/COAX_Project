@@ -5,12 +5,16 @@
     <link rel="stylesheet" type="text/css" href="{% static 'authentication/authentication.css' %}">
     <title>Login</title>
 </head>
+<div class="InputContainer">
     <div class="d-flex justify-content-center">
 
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-login btn-primary">Login</button>
+            <div class="ButtonsCont">
+                <button type="submit" class="btn btn-login btn-primary">Login</button>
+            </div>
         </form>
     </div>
+</div>
 {% endblock %}
