@@ -17,7 +17,7 @@ can help doctors be in touch with their's hospital!</h6>
   <li>Open your favorite code editor</li>
   <li>Open the terminal</li>
   <li><code>$ git clone https://github.com/Palibrix/COAX_Project</code></li>
-  <li><code>$ cd MedDie</code></li>
+  <li><code>$ cd MedSite</code></li>
   <li><code>$ source venv/bin/activate</code>(Linux)</li>
   <li><code>$ python3 manage.py runserver</code></li>
 </ol>
