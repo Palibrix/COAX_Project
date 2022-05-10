@@ -12,7 +12,7 @@ can help doctors be in touch with their's hospital!</h6>
   <li>Read useful researches and write your own</li>
 </ul>
 <h1>___________________________________________________</h1>
-<h3>How to install</h3>
+<h3>How to install (for potential contributors)</h3>
 <ol>
   <li>Open your favorite code editor</li>
   <li>Open the terminal</li>
