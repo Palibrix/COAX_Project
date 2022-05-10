@@ -1,0 +1,26 @@
+.CONTAINER{
+    width: 100%;
+    height: 700px;
+}
+
+.PersonalInfoCont{
+    background-color: white;
+    margin-left:30%;
+    margin-right:30%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: medium;
+}
+
+
+.PersonalInfoCont p{
+    font-size: large;
+    text-decoration: underline 2px;
+    margin: 0;
+}
+
+.PersonalInfoCont button{
+    margin-bottom: 5%;
+}
