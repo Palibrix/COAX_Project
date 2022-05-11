@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'settingsPage/settings.css' %}">
+    <title>Settings</title>
+</head>
+    <script>
+        function invCodeGen()
+        {
+            var u='',i=0;
+            while(i++<36) {
+                var c='xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'[i-1],
+                    r=Math.random()*16|0,
+                    v=c=='x'?r:(r&0x3|0x8);
+                u+=(c=='-'||c=='4')?c:v.toString(16)
+            }
+            document.querySelector(".invCodeText").innerHTML = u;
+
+            return console.log(u);
+
+        }
+    </script>
+    <div class="CONTAINER">
+        <div class="PersonalInfoCont">
+            <h2>Name:</h2>
+            <p>{{user.name}}</p>
+
+            <h2>Surname:</h2>
+            <p>{{user.surname}}</p>
+
+            <h2>Invite code</h2>
+            <button onclick="invCodeGen()">Generate</button>
+            <p class="invCodeText"></p>
+
+        </div>
+    </div>
+{% endblock %}

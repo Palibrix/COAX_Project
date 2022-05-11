@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainPage/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+</head>
+<body>
+  <main>
+    <div id="Container">
+        <div id="Logo">
+            <span style="margin-left:20px;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <script>
+                function openNav() {
+                  document.getElementById("Sidenav").style.width = "20%";
+                }
+
+                function closeNav() {
+                  document.getElementById("Sidenav").style.width = "0";
+                }
+            </script>
+<!--            <img id="logo-icon" src="{%static 'mainPage/images/logo.png' %}" alt="logo-icon">-->
+            <a style="text-decoration: none" href="{% url 'home' %}">
+                <i>
+                    <h1 id="logo-title">HellScare</h1>
+                </i>
+            </a>
+        </div>
+<!-- _______________________________________________ -->
+
+        <div id="Topnav">
+            <form id="navigation-container" action="mainPage.html">
+                <div class="dropdown">
+                    <button class="dropbtn">Profile</button>
+<!--                      <div class="dropdown-content">-->
+<!--                        <a href="{% url 'settings' %}">Settings</a>-->
+<!--                        <a href="{% url 'logout' %}">Log Out</a>-->
+<!--                      </div>-->
+                </div>
+                    <button id="search-button" type="submit">
+                        <img id="search-icon" src="{%static 'mainPage/images/search.png' %}" alt="">
+                    </button>
+                    <input id="navigation-search" name="search" type="text" placeholder=" Search...">
+            </form>
+        </div>
+<!-- _______________________________________________ -->
+
+        <div id="Sidenav" class="sidenav">
+            <h1 class="side-title">Dashboard</h1>
+            <ul class="side-list">
+                <a
+                    style="font-size: 50px;
+                    color: black"
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()">&times;
+                </a>
+                <li>
+                    <a href="{% url 'mainPage'%}">
+                        <img class="side-icon" src="{% static 'mainPage/images/home-icon.png'%}">Home
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'staff' %}">
+                        <img class="side-icon" src="{% static 'mainPage/images/people-icon.png'%}">Staff
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="side-icon" src="{% static 'mainPage/images/box-icon.png'%}">Equipment
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="side-icon" src="{% static 'mainPage/images/note-icon.png'%}">Appointments
+                    </a>
+                </li>
+            </ul>
+
+            <h1 class="side-title">Other</h1>
+            <ul class="side-list">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+
+            <a href="#"><h2 style="margin-left: -10px;position: absolute; bottom: 100px;" class="side-title">Settings</h2></a>
+            <a href="{% url 'logout' %}"><h2 style="margin-left: -10px;position: absolute; bottom: 60px;" class="side-title">Logout</h2></a>
+
+        </div>
+
+        <div id="Main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+    </div>
+
+  </main>
+</body>
+</html>

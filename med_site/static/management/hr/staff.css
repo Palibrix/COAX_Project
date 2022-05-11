@@ -1,0 +1,157 @@
+.CONTAINER{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.CONTAINER button{
+    cursor: pointer;
+}
+
+.StuffCont{
+    width: 60vw;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-flow: column wrap;
+    margin-top: 0;
+    padding: 1%;
+}
+
+/*.UserCont{*/
+/*    border: 100px;*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    background-color: #999999;*/
+/*    width: auto;*/
+/*    height: 200px;*/
+/*    margin: 2%;*/
+/*    word-break:break-all;*/
+/*    border-radius: 15px;*/
+/*    position: relative;*/
+/*}*/
+
+
+
+/*.UserCont h3{*/
+/*    align-self: flex-start;*/
+/*    width: fit-content;*/
+/*    margin-top: 50px;*/
+/*    font-size: xx-large;*/
+/*    color: black;*/
+/*}*/
+
+/*.msgButton{*/
+/*    width: 10%;*/
+/*    height: 20%;*/
+/*    background-color: #6e6e6e;*/
+/*    color: white;*/
+/*    border-radius: 10px;*/
+/*    position: absolute;*/
+/*    right: 30px;*/
+/*    bottom: 20px;*/
+/*    font-size: large;*/
+/*    border: none;*/
+/*}*/
+
+/*.detailsButton{*/
+/*    width: 10%;*/
+/*    height: 20%;*/
+/*    background-color: #6e6e6e;*/
+/*    color: white;*/
+/*    border-radius: 10px;*/
+/*    position: absolute;*/
+/*    right: 200px;*/
+/*    bottom: 20px;*/
+/*    font-size: large;*/
+/*    border: none;*/
+/*}*/
+
+.staffManagement{
+    color: black;
+    border: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60vw;
+    height: 100px;
+    word-break:break-all;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.87) 0 5px 10px 0;
+    padding-right: 30px;
+    text-decoration: none;
+    background-color: rgba(110, 110, 110, 0.08);
+}
+
+.staffManagement a{
+    text-decoration: none;
+    width: fit-content;
+    height: 40%;
+    border-radius: 10px;
+    font-size: xx-large;
+    margin: 10px;
+    border: none;
+}
+
+.staffTableCont{
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    padding: 2%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(110, 110, 110, 0.08);
+
+}
+
+.staffTable td{
+    border-top: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.staffTable{
+    width: 50%;
+    height: fit-content;
+    border-spacing: 0;
+}
+
+.staffTable td{
+    align-self: flex-start;
+    width: fit-content;
+    margin-top: 50px;
+    font-size: large;
+    color: black;
+}
+
+.PFP{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 125px;
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+}
+
+.Edit{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+.See{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+td{
+    padding-right: 30px;
+    text-align: center;
+}
+
+.EditTD, .SeeTD{
+    padding: 0;
+}
