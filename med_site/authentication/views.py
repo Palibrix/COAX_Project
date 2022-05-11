@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 
-from COAX_Project.med_site.core import settings
+from core import settings
 
 
 class CustomLoginView(LoginView):
