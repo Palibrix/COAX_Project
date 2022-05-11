@@ -19,7 +19,7 @@ from django.urls import reverse_lazy
 env = environs.Env()
 environs.Env.read_env()
 
-BASE_DIR = Path(file).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 environs.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = env.str('SECRET_KEY')
@@ -39,14 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'phonenumber_field',
-    'mainPage',
+
     'authentication',
+    'hospitals',
+    'equipments',
     'crispy_forms',
 ]
 
 crispy_template_pack = 'bootstrap 4'
-AUTH_USER_MODEL = "authentication.User"
+# AUTH_USER_MODEL = "authentication.User"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,11 +58,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'core.middlewares.LoginRequiredMiddleware',
+    # 'med_site.middlewares.LoginRequiredMiddleware',
 
 ]
 
-ROOT_URLCONF = 'core.urls'
+ROOT_URLCONF = 'med_site.urls'
 
 TEMPLATES = [
     {
@@ -80,22 +81,22 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-WSGI_APPLICATION = 'core.wsgi.application'
+# WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env.str('DATABASE_NAME'),
-        'USER': env.str('DATABASE_USER'),
-        'PASSWORD': env.str('DATABASE_PASS'),
-        'HOST': env.str('DATABASE_HOST'),
-        'PORT': env.str('DATABASE_PORT'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env.str('DATABASE_NAME'),
+#         'USER': env.str('DATABASE_USER'),
+#         'PASSWORD': env.str('DATABASE_PASS'),
+#         'HOST': env.str('DATABASE_HOST'),
+#         'PORT': env.str('DATABASE_PORT'),
+#     }
+# }
 
 
 # Password validation
