@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
     'authentication',
     'hospitals',
-    'equipments',
+    'management',
     'crispy_forms',
 ]
 
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'med_site/static')]
 # WSGI_APPLICATION = 'core.wsgi.application'
 
 
