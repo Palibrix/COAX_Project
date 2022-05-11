@@ -19,7 +19,7 @@ from django.urls import reverse_lazy
 env = environs.Env()
 environs.Env.read_env()
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = Path(__file__).resolve().parent.parent
 environs.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 SECRET_KEY = env.str('SECRET_KEY')
@@ -58,11 +58,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    # 'med_site.middlewares.LoginRequiredMiddleware',
+    'core.middlewares.LoginRequiredMiddleware',
 
 ]
 
-ROOT_URLCONF = 'med_site.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -80,8 +80,8 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'med_site/static')]
-# WSGI_APPLICATION = 'core.wsgi.application'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
@@ -127,6 +127,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/"
-# LOGOUT_REDIRECT_URL = "/auth/login"
-# LOGOUT_URL = reverse_lazy('login')
 LOGIN_URL = reverse_lazy('login')
