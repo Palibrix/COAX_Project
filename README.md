@@ -6,8 +6,7 @@ can help doctors be in touch with their's hospital!</h6>
 
 <h3>Several main futures</h3>
 <ul>
-  <li>Staff and patients management</li>
-  <li>Hospital's equipment management</li>
+  <li>Human resources, hospital inventory and patients management</li>
   <li>See the freshest news of the medical industry</li>
   <li>Read useful researches and write your own</li>
 </ul>
