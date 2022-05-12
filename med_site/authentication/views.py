@@ -18,4 +18,7 @@ def logout_request(request):
     logout(request)
     return HttpResponseRedirect(settings.LOGIN_URL)
 
+def register_request(request):
+    return render(request, 'register/register.html')
+
 
