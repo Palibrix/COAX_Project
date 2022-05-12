@@ -16,18 +16,18 @@ can help doctors be in touch with their's hospital!</h6>
 <ol>
   <li>Open your favorite code editor</li>
   <li>Open the terminal</li>
-  <li><code>$ git clone https://github.com/Palibrix/COAX_Project</code></li>
-  <li><code>$ virtualenv venv</code></li>
-  <li><code>$ source venv/bin/activate</code>(Linux)</li>
-  <li><code>$ pip install -r requirements.txt</code></li>
-  <li><code>$ cd med_site</code></li>
-  <li><code>$ python3 manage.py makemigrations hospitals</code></li>
-  <li><code>$ python3 manage.py migrate hospitals</code></li>
-  <li><code>$ python3 manage.py makemigrations authentication</code></li>
-  <li><code>$ python3 manage.py migrate authentication</code></li>
-  <li><code>$ python3 manage.py makemigrations</code></li>
-  <li><code>$ python3 manage.py migrate</code></li>
-  <li><code>$ python3 manage.py runserver</code></li>
+  <li><code>git clone https://github.com/Palibrix/COAX_Project</code></li>
+  <li><code>virtualenv venv</code></li>
+  <li><code>source venv/bin/activate</code>(Linux)</li>
+  <li><code>pip install -r requirements.txt</code></li>
+  <li><code>cd med_site</code></li>
+  <li><code>python3 manage.py makemigrations hospitals</code></li>
+  <li><code>python3 manage.py migrate hospitals</code></li>
+  <li><code>python3 manage.py makemigrations authentication</code></li>
+  <li><code>python3 manage.py migrate authentication</code></li>
+  <li><code>python3 manage.py makemigrations</code></li>
+  <li><code>python3 manage.py migrate</code></li>
+  <li><code>python3 manage.py runserver</code></li>
 </ol>
 
 <h3>The project was made by those people</h3>
