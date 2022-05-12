@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'mainPage/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 </head>
 <body>
@@ -32,11 +32,11 @@
 <!-- _______________________________________________ -->
 
         <div id="Topnav">
-            <form id="navigation-container" action="mainPage.html">
+            <form id="navigation-container" action="main_page.html">
                 <div class="dropdown">
                     <button class="dropbtn">Profile</button>
 <!--                      <div class="dropdown-content">-->
-<!--                        <a href="{% url 'settings' %}">Settings</a>-->
+{#<!--                        <a href="{% url 'settings' %}">Settings</a>-->#}
 <!--                        <a href="{% url 'logout' %}">Log Out</a>-->
 <!--                      </div>-->
                 </div>
@@ -59,14 +59,14 @@
                     onclick="closeNav()">&times;
                 </a>
                 <li>
-                    <a href="{% url 'mainPage'%}">
+                    <a href="{% url 'home'%}">
                         <img class="side-icon" src="{% static 'mainPage/images/home-icon.png'%}">Home
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'staff' %}">
-                        <img class="side-icon" src="{% static 'mainPage/images/people-icon.png'%}">Staff
-                    </a>
+{#                    <a href="{% url 'staff' %}">#}
+{#                        <img class="side-icon" src="{% static 'mainPage/images/people-icon.png'%}">Staff#}
+{#                    </a>#}
                 </li>
                 <li>
                     <a href="#">
