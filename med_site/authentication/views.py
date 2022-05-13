@@ -18,7 +18,11 @@ def logout_request(request):
     logout(request)
     return HttpResponseRedirect(settings.LOGIN_URL)
 
+
 def register_request(request):
     return render(request, 'register/register.html')
 
 
+def get_hospital(request):
+    current_user = request.user
+    return current_user.hospital
