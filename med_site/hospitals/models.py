@@ -6,29 +6,38 @@ class Cities(models.Model):
     region = models.CharField(max_length=255)
 
     def __str__(self):
-        return f"{self.city}, {self.region}"
+        return f"{self.city}"
 
-    class Meta:
-        ordering = ("-region", )
-
-
-class Hospitals(models.Model):
-    hospital_name = models.CharField(max_length=255)
-    region = models.ForeignKey(Cities, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return f"{self.hospital_name},  {self.region.city}"
-
-    class Meta:
-        ordering = ("-region", )
 
 
 class Departments(models.Model):
     name = models.CharField(max_length=255)
-    hospital_name = models.ForeignKey(Hospitals, on_delete=models.CASCADE)
+
 
     def __str__(self):
-        return f"{self.name}, {self.hospital_name}"
+        return f"{self.name}"
 
-    class Meta:
-        ordering = ('-hospital_name',)
+
+class Doctor(models.Model):
+    first_name = models.CharField('First name', max_length=255)
+    surname = models.CharField('Surname', max_length=255)
+    departament = models.ForeignKey(Departments,
+                                    null=True,
+                                    on_delete=models.SET_NULL)
+    details = models.TextField('Work Experience', blank=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.surname}"
+# Why don't working many to many in hospital-departament
+class Hospitals(models.Model):
+    hospital_name = models.CharField(max_length=255)
+    region = models.ForeignKey(Cities, on_delete=models.CASCADE)
+    web = models.URLField('Website of Hospital', blank=True)
+    departament = models.ForeignKey(Departments, null=True, on_delete=models.CASCADE)
+    doctors = models.ForeignKey(Doctor, null=True, on_delete=models.CASCADE)
+    def __str__(self):
+        return f"{self.hospital_name}"
+
+
+
+
