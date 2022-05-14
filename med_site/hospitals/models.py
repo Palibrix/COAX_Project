@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Cities(models.Model):
@@ -9,7 +10,9 @@ class Cities(models.Model):
         return f"{self.city}, {self.region}"
 
     class Meta:
-        ordering = ("-region", )
+        ordering = ('-region', )
+        verbose_name = _('City')
+        verbose_name_plural = _('Cities')
 
 
 class Hospitals(models.Model):
@@ -20,7 +23,9 @@ class Hospitals(models.Model):
         return f"{self.hospital_name},  {self.region.city}"
 
     class Meta:
-        ordering = ("-region", )
+        ordering = ('-region', )
+        verbose_name = _('Hospital')
+        verbose_name_plural = _('Hospitals')
 
 
 class Departments(models.Model):
@@ -32,3 +37,5 @@ class Departments(models.Model):
 
     class Meta:
         ordering = ('-hospital_name',)
+        verbose_name = _('Departament')
+        verbose_name_plural = _('Departments')
